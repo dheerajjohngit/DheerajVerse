@@ -1,0 +1,23 @@
+:root{
+
+--bg:#030303;
+
+--surface:#111827;
+
+--glass:rgba(255,255,255,.05);
+
+--border:rgba(255,255,255,.12);
+
+--text:#ffffff;
+
+--muted:#b5b5b5;
+
+--blue:#4F7CFF;
+
+--cyan:#57F2FF;
+
+--purple:#8B5CF6;
+
+--transition:.4s ease;
+
+}

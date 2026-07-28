@@ -1,0 +1,71 @@
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 8%;
+
+}
+
+.left{
+
+width:45%;
+
+}
+
+.left h1{
+
+font-size:95px;
+
+line-height:90px;
+
+}
+
+.left p{
+
+margin:35px 0;
+
+font-size:20px;
+
+color:#9c9c9c;
+
+line-height:35px;
+
+}
+
+.left button{
+
+padding:18px 40px;
+
+background:#4F7CFF;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+color:white;
+
+}
+
+.right{
+
+width:45%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:40px;
+
+color:#57F2FF;
+
+}
