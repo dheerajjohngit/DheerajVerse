@@ -6,3 +6,7 @@
 
     pointer-events:none;
 }
+
+.background canvas{
+    transition: transform .25s ease;
+}

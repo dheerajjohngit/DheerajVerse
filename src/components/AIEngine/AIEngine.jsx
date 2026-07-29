@@ -7,9 +7,9 @@ function AIEngine() {
     <div className="background">
       <Canvas
         camera={{
-          position: [0, 0, 8],
-          fov: 50,
-        }}
+  position: [0, 0, 6.5],
+  fov: 50,
+}}
       >
         <Scene />
       </Canvas>
