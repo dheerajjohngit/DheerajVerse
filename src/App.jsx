@@ -1,11 +1,22 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <section className="center">
+        <div className="container">
+          <h1 className="gradient-text">
+            DHEERAJVERSE
+          </h1>
+
+          <p
+            style={{
+              marginTop: "20px",
+              color: "var(--text-secondary)",
+            }}
+          >
+            AI Core OS Initialised...
+          </p>
+        </div>
+      </section>
     </>
   );
 }

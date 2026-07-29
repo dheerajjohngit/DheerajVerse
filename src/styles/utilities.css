@@ -1,0 +1,60 @@
+.flex{
+
+    display:flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    overflow:hidden;
+
+}
+
+.glass{
+
+    background:var(--glass-bg);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(var(--blur));
+
+    box-shadow:var(--glass-shadow);
+
+}
+
+.gradient-text{
+
+    background:linear-gradient(
+    90deg,
+    var(--white),
+    var(--accent)
+    );
+
+   background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+
+}

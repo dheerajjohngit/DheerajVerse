@@ -1,23 +1,62 @@
 :root{
 
---bg:#030303;
+  /* ==========================
+      COLORS
+  =========================== */
 
---surface:#111827;
+  --bg-primary:#07070A;
+  --bg-secondary:#111114;
+  --bg-card:rgba(255,255,255,.04);
 
---glass:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.08);
 
---border:rgba(255,255,255,.12);
+  --text-primary:#F8F8F8;
+  --text-secondary:#A5A5B5;
 
---text:#ffffff;
+  --accent:#8B5CF6;
+  --accent-light:#A855F7;
+  --accent-dark:#6D28D9;
 
---muted:#b5b5b5;
+  --white:#FFFFFF;
 
---blue:#4F7CFF;
+  --success:#22C55E;
+  --danger:#EF4444;
 
---cyan:#57F2FF;
+  /* ==========================
+      GLASS
+  =========================== */
 
---purple:#8B5CF6;
+  --glass-bg:rgba(255,255,255,.03);
 
---transition:.4s ease;
+  --glass-border:rgba(255,255,255,.06);
+
+  --glass-shadow:
+      0 10px 30px rgba(0,0,0,.35);
+
+  --blur:18px;
+
+  /* ==========================
+      SPACING
+  =========================== */
+
+  --container-width:1400px;
+
+  --section-padding:140px;
+
+  --radius:24px;
+
+  /* ==========================
+      TRANSITIONS
+  =========================== */
+
+  --transition:.35s ease;
+
+  /* ==========================
+      Z INDEX
+  =========================== */
+
+  --z-loader:9999;
+  --z-navbar:1000;
+  --z-cursor:5000;
 
 }
