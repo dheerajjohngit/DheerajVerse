@@ -58,3 +58,15 @@
 color: transparent;
 
 }
+
+.center{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}

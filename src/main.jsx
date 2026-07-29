@@ -1,15 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-import App from "./App";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
 import "./styles/globals.css";
 import "./styles/utilities.css";
 import "./styles/animations.css";
 import "./styles/responsive.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
