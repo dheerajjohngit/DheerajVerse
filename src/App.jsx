@@ -1,5 +1,9 @@
 import { useState } from "react";
+
 import Loader from "./components/Loader/Loader";
+import AIEngine from "./components/AIEngine/AIEngine";
+
+import Hero from "./sections/Hero/Hero";
 
 import "./styles/app.css";
 
@@ -13,18 +17,12 @@ function App() {
   }
 
   return (
+  <>
     <main className="app">
-      <div className="app-content">
-        <h1 className="gradient-text">
-          DHEERAJVERSE
-        </h1>
-
-        <p className="app-subtitle">
-          AI Core Successfully Initialised
-        </p>
-      </div>
+      <Hero />
     </main>
-  );
+  </>
+);
 }
 
 export default App;

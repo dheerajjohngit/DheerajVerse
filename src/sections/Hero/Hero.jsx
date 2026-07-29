@@ -1,51 +1,48 @@
 import "./Hero.css";
+import AIEngine from "../../components/AIEngine/AIEngine";
 
-function Hero(){
+function Hero() {
+  return (
+    <section className="hero">
 
-return(
+      <div className="hero-left">
 
-<section className="hero">
+        <p className="hero-greeting">
+          HELLO.
+        </p>
 
-<div className="left">
+        <h1 className="hero-title">
+          I'm
+          <br />
+          <span>DHEERAJ JOHN J</span>
+        </h1>
 
-<h1>
+        <p className="hero-role">
+          AI Engineer
+        </p>
 
-DHEERAJ
+        <div className="hero-buttons">
 
-<br/>
+          <button className="primary-btn">
+            View Projects
+          </button>
 
-JOHN
+          <button className="secondary-btn">
+            Download Resume
+          </button>
 
-</h1>
+        </div>
 
-<p>
+      </div>
 
-Python Full Stack Developer
+      <div className="hero-right">
 
-AI Engineer
-
-Data Scientist
-
-</p>
-
-<button>
-
-Explore My Work
-
-</button>
+  <AIEngine />
 
 </div>
 
-<div className="right">
-
-IMAGE HERE
-
-</div>
-
-</section>
-
-)
-
+    </section>
+  );
 }
 
 export default Hero;
