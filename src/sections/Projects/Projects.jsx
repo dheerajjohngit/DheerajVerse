@@ -2,13 +2,14 @@ import "./Projects.css";
 import { projects } from "./projectsData";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer } from "../../animations/animations";
+import { staggerContainer } from "../../animations/animations";
 
 function Projects() {
     return (
         <motion.section
     className="projects"
     id="projects"
+    variants={staggerContainer}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}

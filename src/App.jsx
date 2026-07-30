@@ -8,6 +8,7 @@ import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import "./styles/app.css";
 import Projects from "./sections/Projects/Projects";
+import Contact from "./sections/Contact/Contact";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ function App() {
     <About />
     <Skills />
     <Projects />
+    <Contact />
 </main>
   </>
 );
