@@ -1,27 +1,73 @@
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { fadeUp, floatingImage } from "../../animations/animations";
+
+
 
 function ProjectCard({ project }) {
+    const x = useMotionValue(0);
+const y = useMotionValue(0);
+const mouseX = useMotionValue(0);
+const mouseY = useMotionValue(0);
+
+const rotateX = useTransform(y, [-50, 50], [8, -8]);
+const rotateY = useTransform(x, [-50, 50], [-8, 8]);
+
+const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const relativeX = e.clientX - rect.left;
+const relativeY = e.clientY - rect.top;
+
+mouseX.set(relativeX);
+mouseY.set(relativeY);
+
+x.set((e.clientX - centerX) / 4);
+y.set((e.clientY - centerY) / 4);
+};
+
+const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+
+    mouseX.set(0);
+    mouseY.set(0);
+};
     return (
         <motion.div
     className="project-card"
-    initial={{ opacity: 0, y: 60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{
-        duration: 0.6
+    variants={fadeUp}
+    style={{
+        rotateX,
+        rotateY,
+        transformPerspective: 1000,
     }}
+    onMouseMove={handleMouseMove}
+    onMouseLeave={handleMouseLeave}
 >
+
+        <motion.div
+    className="card-spotlight"
+    style={{
+        left: mouseX,
+        top: mouseY,
+    }}
+/>
 
             <div className="project-image">
 
     {project.image ? (
 
-        <img
-            src={project.image}
-            alt={project.title}
-        />
+        <motion.img
+    src={project.image}
+    alt={project.title}
+    variants={floatingImage}
+    animate="animate"
+/>
 
     ) : (
 
