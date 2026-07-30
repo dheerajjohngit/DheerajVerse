@@ -5,7 +5,7 @@ import AIEngine from "./components/AIEngine/AIEngine";
 
 import Hero from "./sections/Hero/Hero";
 import About from "./sections/About/About";
-
+import Skills from "./sections/Skills/Skills";
 import "./styles/app.css";
 
 function App() {
@@ -20,9 +20,10 @@ function App() {
   return (
   <>
     <main className="app">
-      <Hero />
-      <About />
-    </main>
+    <Hero />
+    <About />
+    <Skills />
+</main>
   </>
 );
 }
