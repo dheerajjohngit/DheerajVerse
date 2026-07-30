@@ -1,0 +1,267 @@
+.projects {
+    padding: 120px 8%;
+    background: #09090B;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.projects-header span {
+    color: #B8A1FF;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.projects-header h2 {
+    font-size: 3rem;
+    color: #F5F5F4;
+    margin: 18px 0;
+}
+
+.projects-header p {
+    max-width: 720px;
+    margin: auto;
+    color: #A1A1AA;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+}
+
+.project-card{
+    background: linear-gradient(145deg,#18181B,#141418);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+
+    transition:.35s;
+    cursor:pointer;
+}
+
+.project-card:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.02);
+
+    border-color:#B8A1FF;
+
+    box-shadow:
+
+        0 30px 70px rgba(184,161,255,.18),
+
+        0 0 40px rgba(184,161,255,.08);
+
+}
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.08);
+
+}
+
+.project-image {
+    height: 220px;
+    background: linear-gradient(
+        135deg,
+        #1F1F25,
+        #2B2445
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B8A1FF;
+    font-size: 1rem;
+    font-weight: 600;
+    position:relative;
+}
+
+.project-content{
+    padding:28px;
+
+    display:flex;
+    flex-direction:column;
+
+    flex:1;
+}
+
+.project-content h3 {
+    color: #F5F5F4;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project-content h4 {
+    color: #B8A1FF;
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.project-content p{
+    color:#A1A1AA;
+    line-height:1.7;
+
+    flex:1;
+
+    margin:18px 0 24px;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin-bottom:24px;
+}
+
+.tech-badge{
+    padding:8px 14px;
+    border-radius:999px;
+    background:rgba(184,161,255,.12);
+    border:1px solid rgba(184,161,255,.25);
+
+    color:#D6CCFF;
+
+    font-size:.85rem;
+    font-weight:500;
+
+    transition:all .3s ease;
+}
+
+.tech-badge:hover{
+
+    background:#B8A1FF;
+    color:#09090B;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(184,161,255,.25);
+
+}
+
+.project-buttons{
+    display:flex;
+    gap:14px;
+
+    margin-top:auto;
+}
+
+.project-buttons a{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:12px 0;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-weight:600;
+}
+
+.demo-btn{
+    background:#B8A1FF;
+    color:#09090B;
+}
+
+.demo-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(184,161,255,.35);
+}
+
+.github-btn{
+    border:1px solid rgba(255,255,255,.1);
+    color:#F5F5F4;
+    background:#1B1B1F;
+}
+
+.github-btn:hover{
+    border-color:#B8A1FF;
+    color:#B8A1FF;
+}
+
+.project-image{
+
+    height:220px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#141418;
+    position:relative;
+
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center top;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+}
+.project-card:hover .project-image img{
+
+    transform:scale(1.08);
+
+    filter:brightness(.9);
+
+}
+
+/* .project-image::after{
+    content:"";
+    position:absolute;
+
+    inset:-2px;
+
+    background:linear-gradient(
+        to top,
+        rgba(24,24,27,.98) 0%,
+        rgba(24,24,27,.75) 35%,
+        transparent 100%
+    );
+
+    pointer-events:none;
+} */
+
+.project-placeholder{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#B8A1FF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1A1A22,
+            #2A2348
+        );
+
+    font-weight:600;
+
+}

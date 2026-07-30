@@ -7,6 +7,7 @@ import Hero from "./sections/Hero/Hero";
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import "./styles/app.css";
+import Projects from "./sections/Projects/Projects";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
     <Hero />
     <About />
     <Skills />
+    <Projects />
 </main>
   </>
 );
