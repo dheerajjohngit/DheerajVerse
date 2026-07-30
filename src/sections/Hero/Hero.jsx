@@ -7,7 +7,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       {/* LEFT SIDE */}
       <div className="hero-left">
         <motion.p
@@ -59,50 +59,52 @@ function Hero() {
           />
         </motion.div>
 
-            <p className="hero-description">
-  Building intelligent AI systems, modern web applications,
-  and data-driven solutions that solve real-world problems.
-</p>
+        <motion.p
+          className="hero-description"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 1.2,
+            duration: 0.6,
+          }}
+        >
+          Building intelligent AI systems, modern web applications,
+          and data-driven solutions that solve real-world problems.
+        </motion.p>
 
         <motion.div
-  className="hero-buttons"
-  initial={{ opacity: 0, y: 25 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 1.6,
-    duration: 0.7,
-  }}
->
-  <button
-    className="primary-btn"
-    onClick={() => {
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({
-          behavior: "smooth",
-        });
-    }}
-  >
-    <span>View Projects</span>
+          className="hero-buttons"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 1.6,
+            duration: 0.7,
+          }}
+        >
+          <button
+            className="primary-btn"
+            onClick={() => {
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({
+                  behavior: "smooth",
+                });
+            }}
+          >
+            <span>View Projects</span>
+            <span className="btn-icon">→</span>
+          </button>
 
-    <span className="btn-icon">
-      →
-    </span>
-  </button>
-
-  <button
-    className="secondary-btn"
-    onClick={() => {
-      window.open("/resume.pdf", "_blank");
-    }}
-  >
-    <span>Download Resume</span>
-
-    <span className="btn-icon">
-      ↓
-    </span>
-  </button>
-</motion.div>
+          <button
+            className="secondary-btn"
+            onClick={() => {
+              window.open("/resume.pdf", "_blank");
+            }}
+          >
+            <span>Download Resume</span>
+            <span className="btn-icon">↓</span>
+          </button>
+        </motion.div>
       </div>
 
       {/* RIGHT SIDE */}

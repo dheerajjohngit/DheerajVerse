@@ -1,0 +1,343 @@
+.about{
+    width: min(1400px, 90%);
+    margin: 0 auto;
+    min-height: 100vh;
+
+    padding: 140px 0 100px;
+
+    color: white;
+}
+
+.about-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-tag{
+    color:#B8A1FF;
+    letter-spacing:3px;
+    font-size:.9rem;
+    margin-bottom:10px;
+}
+
+.about-header h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.section-description{
+    color:#A1A1AA;
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.about-card{
+
+    display:grid;
+
+    grid-template-columns: 1fr 1.4fr;
+
+    gap:60px;
+
+    background:#141418;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:60px;
+
+    backdrop-filter:blur(15px);
+}
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#B8A1FF;
+
+    margin-bottom:40px;
+
+    font-weight:600;
+}
+
+.status-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#B8A1FF;
+
+    box-shadow:0 0 15px #B8A1FF;
+}
+
+.profile-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.profile-row span{
+    color:#A1A1AA;
+}
+
+.profile-row p{
+    font-weight:600;
+}
+
+.profile-right h3{
+
+    color:#B8A1FF;
+
+    margin-bottom:25px;
+
+    font-size:1.6rem;
+}
+
+.profile-right p{
+
+    color:#D4D4D8;
+
+    line-height:2;
+
+    font-size:1.05rem;
+}
+
+.profile-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    padding:20px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.profile-row span{
+
+    min-width:110px;
+
+    color:#A1A1AA;
+}
+
+.profile-row p{
+
+    flex:1;
+
+    text-align:right;
+
+    font-weight:600;
+}
+
+
+/* ===========================
+   Statistics
+=========================== */
+
+.stats-grid{
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.stat-card{
+
+    background:#141418;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#B8A1FF;
+
+    box-shadow:0 20px 45px rgba(184,161,255,.18);
+}
+
+.stat-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+}
+
+.stat-card h2{
+
+    color:#B8A1FF;
+
+    margin-bottom:10px;
+}
+
+.stat-card p{
+
+    color:#A1A1AA;
+}
+
+@media (max-width:992px){
+
+    .about-card{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:600px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline-section{
+
+    margin-top:120px;
+}
+
+.timeline-title{
+
+    text-align:center;
+
+    font-size:2.6rem;
+
+    margin-bottom:70px;
+
+    color:white;
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:16px;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:rgba(184,161,255,.35);
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding-left:70px;
+
+    margin-bottom:60px;
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:8px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#B8A1FF;
+
+    box-shadow:0 0 20px #B8A1FF;
+}
+
+.timeline-content{
+
+    background:#141418;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    transition:.35s;
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#B8A1FF;
+
+    box-shadow:0 18px 40px rgba(184,161,255,.18);
+}
+
+.timeline-content span{
+
+    color:#B8A1FF;
+
+    font-weight:600;
+}
+
+.timeline-content h3{
+
+    margin:10px 0 15px;
+}
+
+.timeline-content p{
+
+    color:#A1A1AA;
+
+    line-height:1.8;
+}
