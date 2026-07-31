@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .app {
     width: 100%;
     display: flex;

@@ -1,39 +1,87 @@
 import "./Navbar.css";
+import { useEffect, useState } from "react";
+
+const sections = ["hero", "about", "skills", "projects", "contact"];
 
 function Navbar() {
-  return (
-    <nav className="navbar">
+    const [active, setActive] = useState("hero");
+const [scrolled, setScrolled] = useState(false);
 
-      <div className="logo">
+    useEffect(() => {
+      
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 50);
+            const scrollPosition = window.scrollY + 150;
 
-        DheerajVerse
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
 
-      </div>
+                if (
+                    element &&
+                    scrollPosition >= element.offsetTop &&
+                    scrollPosition < element.offsetTop + element.offsetHeight
+                ) {
+                    setActive(section);
+                }
+            });
+        };
 
-      <ul>
+        window.addEventListener("scroll", handleScroll);
 
-        <li>Home</li>
+        handleScroll();
 
-        <li>About</li>
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-        <li>Experience</li>
+    return (
+        <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+            <div className="navbar-container">
 
-        <li>Projects</li>
+                <a href="#hero" className="logo">
+                    Dheeraj<span>Verse</span>
+                </a>
 
-        <li>Skills</li>
+                <nav className="nav-links">
 
-        <li>Contact</li>
+                    <a
+                        href="#hero"
+                        className={active === "hero" ? "active" : ""}
+                    >
+                        Home
+                    </a>
 
-      </ul>
+                    <a
+                        href="#about"
+                        className={active === "about" ? "active" : ""}
+                    >
+                        About
+                    </a>
 
-      <button>
+                    <a
+                        href="#skills"
+                        className={active === "skills" ? "active" : ""}
+                    >
+                        Skills
+                    </a>
 
-        Hire Me
+                    <a
+                        href="#projects"
+                        className={active === "projects" ? "active" : ""}
+                    >
+                        Projects
+                    </a>
 
-      </button>
+                    <a
+                        href="#contact"
+                        className={active === "contact" ? "active" : ""}
+                    >
+                        Contact
+                    </a>
 
-    </nav>
-  );
+                </nav>
+            </div>
+        </header>
+    );
 }
 
 export default Navbar;

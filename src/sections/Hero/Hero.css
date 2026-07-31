@@ -1,20 +1,102 @@
 .hero {
     width: min(1400px, 90%);
-    min-height: 100vh;
 
-    margin: auto;
+    min-height: calc(100vh - 80px);
+
+    margin: 0 auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
 
-    gap: 80px;
-}
+    gap: clamp(40px, 5vw, 80px);
 
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
 .hero-left {
     display: flex;
     flex-direction: column;
+}
+
+.hero-tag{
+    display:inline-block;
+    width:fit-content;
+
+    padding:8px 16px;
+
+    border:1px solid rgba(184,161,255,.25);
+
+    background:rgba(184,161,255,.06);
+
+    border-radius:999px;
+
+    color:var(--accent);
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:28px;
+}
+
+.hero-headline{
+
+    margin-top:18px;
+
+    max-width:620px;
+
+    font-size:clamp(1.5rem,2.4vw,2.2rem);
+
+    line-height:1.35;
+
+    font-weight:500;
+
+    color:var(--text-primary);
+
+}
+
+.hero-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:24px;
+
+}
+
+.hero-tech span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--text-secondary);
+
+    font-size:.88rem;
+
+    transition:.35s;
+
+}
+
+.hero-tech span:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--accent);
+
+    color:var(--accent);
+
+    background:rgba(184,161,255,.08);
+
 }
 
 .hero-greeting {
@@ -25,9 +107,11 @@
 }
 
 .hero-title {
-    font-size: clamp(4rem, 8vw, 7rem);
-    line-height: .95;
+    font-size: clamp(3.8rem, 6vw, 5.5rem);
+    line-height: 0.92;
     font-weight: 700;
+
+    margin: 0;
 }
 
 .hero-title span{
@@ -64,14 +148,14 @@
 }
 
 .hero-role {
-    margin-top: 35px;
+    margin-top: 24px;
     font-size: 1.4rem;
     color: var(--text-secondary);
     min-height: 40px;
 }
 
 .hero-description {
-    margin-top: 30px;
+    margin-top: 20px;
     max-width: 550px;
     line-height: 1.8;
     color: var(--text-secondary);
@@ -80,7 +164,7 @@
 .hero-buttons{
     display:flex;
     gap:18px;
-    margin-top:45px;
+    margin-top:24px;
 }
 
 .primary-btn,
@@ -177,8 +261,8 @@
 
     position: absolute;
 
-    width: 380px;
-    height: 380px;
+    width:340px;
+height:340px;
 
     border-radius: 50%;
 

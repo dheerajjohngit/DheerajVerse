@@ -9,6 +9,7 @@ import Skills from "./sections/Skills/Skills";
 import "./styles/app.css";
 import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,8 @@ function App() {
 
   return (
   <>
+    <Navbar />
+
     <main className="app">
     <Hero />
     <About />
