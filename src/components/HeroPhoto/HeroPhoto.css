@@ -1,0 +1,588 @@
+.hero-photo-card{
+
+    position:relative;
+
+    width:390px;
+    height:470px;
+
+    border-radius:34px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    border:2px dashed rgba(184,161,255,.18);
+
+    box-shadow:
+    0 40px 80px rgba(0,0,0,.45);
+
+    transform-style: preserve-3d;
+will-change: transform;
+cursor: pointer;
+transition: box-shadow .35s ease;
+
+}
+.hero-photo-container{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Portrait */
+
+.hero-photo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* Purple Glow */
+
+.photo-glow{
+
+    position:absolute;
+
+    inset:-80px;
+
+    background:
+    radial-gradient(circle,
+    rgba(184,161,255,.28),
+    transparent 70%);
+
+    filter:blur(60px);
+
+    z-index:-1;
+
+}
+
+/* Animated Border */
+
+.photo-border{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:34px;
+
+    border:1px solid rgba(184,161,255,.25);
+
+    animation:borderPulse 4s ease-in-out infinite;
+
+}
+
+@keyframes borderPulse{
+
+0%,100%{
+
+opacity:.4;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+/* AI Scan */
+
+.scan-line{
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+    opacity:.55;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    #D6CCFF,
+    transparent);
+
+    box-shadow:
+    0 0 20px #D6CCFF;
+
+    animation:scan 4.5s ease-in-out infinite;
+
+}
+
+@keyframes scan{
+
+0%{
+
+top:-5%;
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+90%{
+
+opacity:1;
+
+}
+
+100%{
+
+top:105%;
+
+opacity:0;
+
+}
+
+}
+
+/* Status */
+
+.status-badge{
+
+    position:absolute;
+
+    top: -65px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:rgba(20,20,24,.95);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    z-index:100;
+
+    white-space:nowrap;
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.status-dot{
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#3BFF83;
+
+box-shadow:
+0 0 10px #3BFF83;
+
+}
+
+/* Bottom Card */
+
+.hero-info{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+right:0;
+
+padding:24px;
+
+background:
+
+linear-gradient(
+
+transparent,
+
+rgba(9,9,11,.94)
+
+);
+
+}
+
+.hero-info h3{
+
+margin:0;
+
+font-size:1.5rem;
+
+}
+
+.hero-info p{
+
+margin-top:8px;
+
+color:var(--text-secondary);
+
+}
+.hero-photo-card:hover{
+
+    box-shadow:
+        0 40px 80px rgba(0,0,0,.45),
+        0 0 40px rgba(184,161,255,.18);
+
+}
+
+
+/* =========================================
+   ONE-TIME AI SCAN
+========================================= */
+
+.scan-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 8, 12, 0.38);
+    backdrop-filter: brightness(.8);
+    border-radius: inherit;
+    z-index: 4;
+    pointer-events: none;
+
+    animation: overlayFade 6.2s forwards;
+}
+
+@keyframes overlayFade {
+
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* =========================================
+   SCAN LINE
+========================================= */
+
+.scan-line {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d6ccff,
+        #ffffff,
+        #d6ccff,
+        transparent
+    );
+
+    box-shadow:
+        0 0 20px #d6ccff,
+        0 0 45px rgba(214,204,255,.85);
+
+    z-index: 8;
+
+    animation: scanDown 4.2s ease-in-out forwards;
+
+}
+
+@keyframes scanDown {
+
+    0% {
+
+        top: -5%;
+
+        opacity: 0;
+
+    }
+
+    8% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        top: 105%;
+
+        opacity: 0;
+
+    }
+
+}
+
+/* =========================================
+   SCAN TEXT
+========================================= */
+
+.scan-text {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 9;
+
+    text-align: center;
+
+    animation: scanTextHide .5s ease forwards;
+    animation-delay: 3.1s;
+
+}
+
+.scan-text p {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: .95rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+.scan-text span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #b8a1ff;
+
+    font-size: .75rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+@keyframes scanTextHide {
+
+    to {
+
+        opacity: 0;
+
+        transform: translate(-50%, -50%) scale(.95);
+
+    }
+
+}
+
+/* =========================================
+   OPTIONAL FLASH
+========================================= */
+
+.hero-photo-card {
+
+    overflow: hidden;
+
+}
+
+.hero-photo-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    background: rgba(255,255,255,.06);
+
+    opacity: 0;
+
+    animation: photoFlash 2.4s ease forwards;
+
+}
+
+@keyframes photoFlash {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    45% {
+
+        opacity: .15;
+
+    }
+
+    65% {
+
+        opacity: .28;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+/* =========================================
+   AI HUD PANEL
+========================================= */
+
+.scan-hud {
+
+    position: absolute;
+
+    left: 18px;
+    bottom: 18px;
+
+    width: 240px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background: rgba(12,12,18,.82);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(184,161,255,.22);
+
+    z-index: 9;
+
+    animation: hudHide .6s ease forwards;
+    animation-delay: 7.6s;
+
+}
+
+.scan-hud h4{
+
+    margin:0 0 12px;
+
+    color:#d6ccff;
+
+    font-size:.82rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.hud-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:8px 0;
+
+    font-size:.74rem;
+
+    opacity:0;
+
+    animation: hudRowIn .95s forwards;
+
+}
+
+.hud-row span{
+
+    color:#a1a1aa;
+
+}
+
+.hud-row strong{
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+@keyframes hudHide{
+
+    to{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+}
+@keyframes hudRowIn{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}

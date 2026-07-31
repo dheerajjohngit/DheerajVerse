@@ -24,7 +24,7 @@ function Link(a, b) {
       color="#B8A1FF"
       lineWidth={1}
       transparent
-      opacity={0.35}
+      opacity={0.18}
     />
   );
 }

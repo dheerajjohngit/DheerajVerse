@@ -25,12 +25,14 @@ function Node({
       <sphereGeometry args={[size, 32, 32]} />
 
       <meshStandardMaterial
-        color="#E9E2FF"
-        emissive="#B8A1FF"
-        emissiveIntensity={glow ? 4 : 1.8}
-        transparent
-        opacity={0.9}
-      />
+
+    color="#D6CCFF"
+
+    emissive="#B8A1FF"
+
+    emissiveIntensity={0.6}
+
+/>
     </mesh>
   );
 }

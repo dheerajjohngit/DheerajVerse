@@ -1,163 +1,135 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-
-import AIEngine from "../../components/AIEngine/AIEngine";
-
+import HeroPhoto from "../../components/HeroPhoto/HeroPhoto";
 import "./Hero.css";
+
 
 function Hero() {
   return (
     <section className="hero" id="hero">
+
       {/* LEFT SIDE */}
-      <div className="hero-left">
+      <motion.div
+        className="hero-left"
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
 
-  <motion.p
-    className="hero-tag"
-    initial={{ opacity: 0, y: 25 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-  >
-    AI • MACHINE LEARNING • FULL STACK
-  </motion.p>
+        <div className="hero-tag">
+          AI • MACHINE LEARNING • FULL STACK
+        </div>
 
-  <motion.h1
-    className="hero-title"
-    initial={{ opacity: 0, y: 35 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-      delay: 0.3,
-      duration: 0.7,
-    }}
-  >
-    DHEERAJ JOHN
-  </motion.h1>
+        <h1 className="hero-title">
+          DHEERAJ <span>JOHN</span>
+        </h1>
 
-  {/* <motion.h2
-    className="hero-headline"
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-      delay: 0.6,
-      duration: 0.7,
-    }}
-  >
-    Building intelligent software that solves
-    <br />
-    real-world problems.
-  </motion.h2> */}
+        <TypeAnimation
+          sequence={[
+            "Machine Learning Engineer",
+            2000,
+            "AI Engineer",
+            2000,
+            "Python Full Stack Developer",
+            2000,
+            "Data Science Enthusiast",
+            2000,
+          ]}
+          wrapper="p"
+          speed={55}
+          repeat={Infinity}
+          className="hero-role"
+        />
 
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{
-      delay: 0.9,
-      duration: 0.6,
-    }}
-  >
-    <TypeAnimation
-      sequence={[
-        "Machine Learning Engineer",
-        2000,
-        "AI Engineer",
-        2000,
-        "Python Full Stack Developer",
-        2000,
-        "Data Science Enthusiast",
-        2000,
-      ]}
-      wrapper="p"
-      speed={55}
-      repeat={Infinity}
-      className="hero-role"
-    />
-  </motion.div>
+        <p className="hero-description">
+          I build intelligent AI systems 
+          that solve <br /> real-world 
+          problems through Data Science & AI,<br /> ML and
+          Full Stack Development.
+        </p>
 
-  <motion.p
-  className="hero-description"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 1.1,
-    duration: 0.6,
-  }}
->
-  Building intelligent AI systems, modern web applications,
-  and data-driven solutions that solve real-world problems.
-</motion.p>
+        <div className="hero-buttons">
 
-  {/* Technology Chips */}
+          <button
+            className="primary-btn"
+            onClick={() =>
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({
+                  behavior: "smooth",
+                })
+            }
+          >
+            Explore My Work →
+          </button>
 
-  {/* <motion.div
-    className="hero-tech"
-    initial={{ opacity: 0, y: 25 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-      delay: 1.4,
-      duration: 0.6,
-    }}
-  >
-    <span>Python</span>
-    <span>Machine Learning</span>
-    <span>React</span>
-    <span>Django</span>
-    <span>Data Science</span>
-    <span>Computer Vision</span>
-  </motion.div> */}
+          <button
+            className="secondary-btn"
+            onClick={() =>
+              window.open("/resume.pdf", "_blank")
+            }
+          >
+            Download Resume
+          </button>
 
-  <motion.div
-    className="hero-buttons"
-    initial={{ opacity: 0, y: 25 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-      delay: 1.7,
-      duration: 0.7,
-    }}
-  >
-    <button
-      className="primary-btn"
-      onClick={() => {
-        document
-          .getElementById("projects")
-          ?.scrollIntoView({
-            behavior: "smooth",
-          });
-      }}
-    >
-      <span>Explore My Work</span>
-      <span className="btn-icon">→</span>
-    </button>
+        </div>
+        
+        <div className="hero-stats">
 
-    <button
-      className="secondary-btn"
-      onClick={() => {
-        window.open("/resume.pdf", "_blank");
-      }}
-    >
-      <span>Download Resume</span>
-      <span className="btn-icon">↓</span>
-    </button>
-  </motion.div>
+  <div className="stat-item">
+    <h2>12+</h2>
+    <p>Projects</p>
+  </div>
+
+  <div className="stat-divider"></div>
+
+  <div className="stat-item">
+    <h2>20+</h2>
+    <p>Technologies</p>
+  </div>
+
+  <div className="stat-divider"></div>
+
+  <div className="stat-item">
+    <h2>1+</h2>
+    <p>Years Experience</p>
+  </div>
 
 </div>
 
+
+
+      </motion.div>
+
       {/* RIGHT SIDE */}
+
       <motion.div
         className="hero-right"
-        initial={{
-          opacity: 0,
-          scale: 0.85,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{
-          delay: 1.8,
-          duration: 0.8,
+          delay: .4,
+          duration: .8
         }}
       >
-        <AIEngine />
+
+        <div className="hero-photo-wrapper">
+
+    <div className="hero-circle"></div>
+
+    <div className="hero-glow"></div>
+
+    <div className="hero-link">
+        <span>AI LINK</span>
+        <div className="hero-line"></div>
+    </div>
+
+    <HeroPhoto />
+
+</div>
+
       </motion.div>
+
     </section>
   );
 }
