@@ -1,0 +1,98 @@
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -100;
+    overflow: hidden;
+    background: #09090B;
+}
+
+/* Ambient Glow */
+
+.bg-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.18;
+    animation:floatGlow 14s ease-in-out infinite;
+}
+
+.glow-1{
+    width:500px;
+    height:500px;
+
+    background:#B8A1FF;
+
+    top:-120px;
+    left:-100px;
+}
+
+.glow-2{
+    width:450px;
+    height:450px;
+
+    background:#ffffff;
+
+    bottom:-120px;
+    right:-120px;
+
+    opacity:.05;
+
+    animation-delay:5s;
+}
+
+/* Engineering Grid */
+
+.bg-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+
+    linear-gradient(90deg,
+    rgba(255,255,255,.04) 1px,
+    transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image: radial-gradient(circle, black 45%, transparent 100%);
+}
+
+/* Overlay */
+
+.bg-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at center,
+    transparent 20%,
+    rgba(9,9,11,.3) 100%);
+}
+
+/* Animation */
+
+@keyframes floatGlow{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:
+
+translate(40px,-30px)
+
+scale(1.08);
+
+}
+
+}

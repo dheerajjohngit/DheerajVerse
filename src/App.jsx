@@ -10,6 +10,7 @@ import "./styles/app.css";
 import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
+import Background from "./components/Background/Background";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ function App() {
 
   return (
   <>
+    <Background />
     <Navbar />
 
     <main className="app">

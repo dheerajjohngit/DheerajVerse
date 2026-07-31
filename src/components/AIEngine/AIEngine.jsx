@@ -4,7 +4,7 @@ import "./AIEngine.css";
 
 function AIEngine() {
   return (
-    <div className="background">
+    <div className="ai-engine">
       <Canvas
         camera={{
   position: [0, 0, 6.5],

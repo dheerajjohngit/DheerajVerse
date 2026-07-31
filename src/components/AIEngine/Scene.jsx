@@ -27,7 +27,7 @@ function AIGroup() {
   });
 
   return (
-    <group ref={groupRef} scale={1.3}>
+    <group ref={groupRef} scale={1.1}>
       <Connections />
       <Nodes />
     </group>
