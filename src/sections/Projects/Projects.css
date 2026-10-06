@@ -384,3 +384,46 @@ box-shadow:
     pointer-events:none;
 
 }
+
+@media (max-width: 900px) {
+    .projects {
+        padding: 100px 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects {
+        padding: 90px 18px;
+    }
+
+    .projects-header h2 {
+        font-size: 2rem;
+    }
+
+    .projects-header p {
+        font-size: .95rem;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-buttons a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}

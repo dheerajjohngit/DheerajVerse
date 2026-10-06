@@ -585,3 +585,56 @@
     z-index:1;
 
 }
+
+@media (max-width: 900px) {
+    .contact {
+        padding: 100px 24px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .info-item {
+        min-height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact {
+        padding: 90px 18px;
+    }
+
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info-card,
+    .contact-form {
+        padding: 24px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 14px 16px;
+    }
+
+    .send-btn {
+        width: 100%;
+    }
+
+    .info-item {
+        gap: 16px;
+    }
+
+    .contact-icon {
+        font-size: 1.6rem;
+    }
+}

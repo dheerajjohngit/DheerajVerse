@@ -1,6 +1,7 @@
 .hero {
     width: min(1400px, 92%);
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 88px);
+    padding-top: 82px;
 
     margin: auto;
 
@@ -12,6 +13,19 @@
     gap: 80px;
 
     position: relative;
+    scroll-margin-top: 110px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 66px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 56px;
+    }
 }
 
 /* ---------------- LEFT ---------------- */
@@ -592,4 +606,57 @@ display:none;
 
 }
 
+}
+
+@media (max-width: 640px) {
+    .hero {
+        width: min(100%, 94%);
+        min-height: auto;
+        padding: 90px 0 60px;
+        gap: 40px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+    }
+
+    .hero-role {
+        font-size: 1rem;
+        margin-top: 18px;
+    }
+
+    .hero-description {
+        font-size: .96rem;
+        line-height: 1.7;
+    }
+
+    .hero-photo-wrapper {
+        width: min(92vw, 320px);
+        height: min(92vw, 380px);
+        padding-top: 10px;
+    }
+
+    .hero-circle {
+        width: min(78vw, 280px);
+        height: min(78vw, 280px);
+    }
+
+    .hero-glow {
+        width: min(68vw, 240px);
+        height: min(68vw, 240px);
+    }
+
+    .hero-link {
+        display: none;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        margin-top: 22px;
+    }
 }

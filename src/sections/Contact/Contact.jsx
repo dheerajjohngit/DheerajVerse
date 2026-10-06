@@ -93,15 +93,17 @@ function Contact() {
         <h4>LinkedIn</h4>
 
         <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/dheeraj-john-176a902a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+"
             target="_blank"
             rel="noreferrer"
         >
-            linkedin.com/in/yourprofile
+            linkedin.com/in/dheeraj-john-176a902a3
         </a>
 
         <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/dheeraj-john-176a902a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+"
             target="_blank"
             rel="noreferrer"
             className="info-action"
@@ -125,15 +127,15 @@ function Contact() {
         <h4>GitHub</h4>
 
         <a
-            href="https://github.com/yourusername"
+            href="https://github.com/dheerajjohngit"
             target="_blank"
             rel="noreferrer"
         >
-            github.com/yourusername
+            github.com/dheerajjohngit
         </a>
 
         <a
-            href="https://github.com/yourusername"
+            href="https://github.com/dheerajjohngit"
             target="_blank"
             rel="noreferrer"
             className="info-action"

@@ -1,5 +1,5 @@
 import "./Skills.css";
-import { skillCategories } from "./skillsData";
+import { skillCategories } from "./SkillsData";
 import SkillCard from "./SkillCard";
 
 function Skills() {
@@ -12,10 +12,10 @@ function Skills() {
 
                 <h2>Skills Matrix</h2>
 
-                <p>
+                {/* <p>
                     Core technologies, frameworks, and tools I use to build
                     intelligent, scalable, and user-focused applications.
-                </p>
+                </p> */}
 
             </div>
             <div className="skills-divider"></div>

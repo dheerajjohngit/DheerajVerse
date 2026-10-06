@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 15px;
+    }
+}

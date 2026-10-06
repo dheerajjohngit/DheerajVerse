@@ -117,7 +117,7 @@ export const skillCategories = [
       },
       {
         name: "Jupyter Notebook",
-        subtitle: "Interactive Development Environment",
+        subtitle: "Development Environment",
         level: "Advanced"
       },
       {
