@@ -62,7 +62,7 @@ function About() {
           <button
             className="journey-button"
             onClick={() =>
-              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+              document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })
             }
           >
             View My Journey <span>→</span>

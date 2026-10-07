@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaCube } from "react-icons/fa";
 import { projects } from "../Projects/projectsData";
 import { ecosystems, skillIcons } from "./skillsUniverseData";
 import "./Skills.css";
@@ -112,36 +111,6 @@ function SkillEcosystem({ category, activeSkill, onActivate }) {
     );
 }
 
-function SkillInspector({ activeSkill }) {
-    const categoryNames = ecosystems
-        .filter((category) => category.skills.includes(activeSkill))
-        .map((category) => category.title)
-        .join(" / ");
-    const relatedProjects = projectsUsing(activeSkill);
-
-    return (
-        <div className="skill-inspector" aria-live="polite" aria-atomic="true">
-            <div className="inspector-mark"><FaCube /></div>
-            <div className="inspector-copy">
-                <span>{categoryNames || "SKILLS UNIVERSE"} · CORE TECHNOLOGY</span>
-                <strong>{activeSkill}</strong>
-            </div>
-            <div className="inspector-projects">
-                <span>PROJECT CONNECTIONS</span>
-                {relatedProjects.length ? (
-                    <div className="inspector-project-list">
-                        {relatedProjects.map((project) => (
-                            <a href="#projects" key={project.id}>{projectLabel(project)}</a>
-                        ))}
-                    </div>
-                ) : (
-                    <p>No featured project mapped yet</p>
-                )}
-            </div>
-        </div>
-    );
-}
-
 function Skills() {
     const [activeSkill, setActiveSkill] = useState("Python");
     const activeCategoryIds = ecosystems
@@ -194,7 +163,6 @@ function Skills() {
                 </div>
             </div>
 
-            <SkillInspector activeSkill={activeSkill} />
         </motion.section>
     );
 }

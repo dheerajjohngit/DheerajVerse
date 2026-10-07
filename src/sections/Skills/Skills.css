@@ -5,7 +5,7 @@
     isolation: isolate;
     width: min(1560px, 100%);
     margin: 0 auto;
-    padding: 124px clamp(24px, 5vw, 76px) 112px;
+    padding: 154px clamp(24px, 5vw, 76px) 112px;
     color: #f4f2ff;
     overflow: hidden;
 }
@@ -264,15 +264,15 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    min-height: 31px;
-    padding: 3px 10px 3px 4px;
+    gap: 15px;
+    min-height: 44px;
+    padding: 3px 14px 3px 6px;
     border: 1px solid rgba(202, 188, 255, 0.13);
     border-radius: 999px;
     background: rgba(10, 11, 22, 0.76);
     color: #c2bfd0;
     font: inherit;
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     line-height: 1;
     cursor: pointer;
     transition: color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -300,9 +300,9 @@
 }
 
 .skill-node-icon {
-    flex: 0 0 23px;
-    width: 23px;
-    height: 23px;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -494,82 +494,6 @@
     animation-delay: -2.5s;
 }
 
-.skill-inspector {
-    display: grid;
-    grid-template-columns: 42px minmax(150px, 0.8fr) minmax(240px, 1.2fr);
-    align-items: center;
-    gap: 14px;
-    max-width: 760px;
-    min-height: 78px;
-    margin: -4px auto 32px;
-    padding: 13px 18px;
-    border: 1px solid rgba(184, 161, 255, 0.2);
-    border-radius: 14px;
-    background: linear-gradient(115deg, rgba(28, 23, 48, 0.78), rgba(10, 11, 20, 0.84));
-    box-shadow: 0 12px 38px rgba(0, 0, 0, 0.24), inset 0 1px rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(14px);
-}
-
-.inspector-mark {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(188, 151, 255, 0.34);
-    border-radius: 11px;
-    background: rgba(151, 109, 255, 0.15);
-    color: #cfb4ff;
-}
-
-.inspector-copy,
-.inspector-projects {
-    display: grid;
-    gap: 4px;
-    min-width: 0;
-}
-
-.inspector-copy > span,
-.inspector-projects > span {
-    color: #9690aa;
-    font-size: 0.58rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.inspector-copy strong {
-    color: #f3edff;
-    font-size: 0.98rem;
-}
-
-.inspector-project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.inspector-project-list a {
-    padding: 4px 8px;
-    border: 1px solid rgba(184, 161, 255, 0.18);
-    border-radius: 999px;
-    color: #d4c8f7;
-    font-size: 0.68rem;
-    transition: border-color 180ms ease, background 180ms ease;
-}
-
-.inspector-project-list a:hover,
-.inspector-project-list a:focus-visible {
-    border-color: rgba(184, 161, 255, 0.72);
-    background: rgba(139, 92, 246, 0.16);
-    outline: none;
-}
-
-.inspector-projects p {
-    margin: 0;
-    color: #aaa5b8;
-    font-size: 0.73rem;
-}
-
 @keyframes orbit-turn {
     to { transform: rotate(360deg); }
 }
@@ -636,7 +560,7 @@
 
 @media (max-width: 900px) {
     .skills-universe {
-        padding-top: 105px;
+        padding-top: 135px;
     }
 
     .skills-universe-header {
@@ -678,7 +602,7 @@
 
 @media (max-width: 640px) {
     .skills-universe {
-        padding: 88px 20px 78px;
+        padding: 118px 20px 78px;
     }
 
     .skills-universe-header {
@@ -762,27 +686,11 @@
         font-size: 0.73rem;
     }
 
-    .skill-inspector {
-        grid-template-columns: 38px minmax(0, 1fr);
-        gap: 11px;
-        margin: 0 auto 27px;
-        padding: 13px;
-    }
-
-    .inspector-mark {
-        width: 34px;
-        height: 34px;
-    }
-
-    .inspector-projects {
-        grid-column: 2;
-    }
-
 }
 
 @media (min-width: 1181px) and (max-height: 850px) {
     .skills-universe {
-        padding-top: 110px;
+        padding-top: 140px;
         padding-bottom: 0;
     }
 
@@ -860,39 +768,21 @@
     }
 
     .skill-node {
-        min-height: 25px;
+        min-height: 33px;
         gap: 4px;
-        padding: 2px 7px 2px 3px;
-        font-size: 0.61rem;
+        padding: 2px 9px 2px 4px;
+        font-size: 0.68rem;
     }
 
     .skill-node-icon {
-        flex-basis: 18px;
-        width: 18px;
-        height: 18px;
-        font-size: 0.61rem;
+        flex-basis: 26px;
+        width: 26px;
+        height: 26px;
+        font-size: 0.68rem;
     }
 
     .developer-core {
         width: min(100%, 212px);
-    }
-
-    .skill-inspector {
-        grid-template-columns: 34px minmax(130px, 0.8fr) minmax(210px, 1.2fr);
-        gap: 10px;
-        min-height: 52px;
-        margin: 0 auto 6px;
-        padding: 6px 10px;
-    }
-
-    .inspector-mark {
-        width: 30px;
-        height: 30px;
-        border-radius: 9px;
-    }
-
-    .inspector-copy strong {
-        font-size: 0.86rem;
     }
 
 }
