@@ -88,7 +88,7 @@ function AiCompanion() {
 
             <div className="companion-message" role="status">
                 <span>Hi! I'm Dheeraj's AI</span>
-                <span>Navigate or ask me anything.</span>
+                <span>Navigate / ask me anything</span>
             </div>
         </div>
     );

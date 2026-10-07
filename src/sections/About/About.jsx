@@ -45,7 +45,7 @@ function About() {
           </h2>
 
           <p>
-            I&apos;m Dheeraj John, a Computer Science graduate who enjoys building
+            I&apos;m Dheeraj John, a Computer Science & Engineering graduate who enjoys building
             web applications, working with data, and exploring AI. I turn ideas
             into useful products and keep improving through every project.
           </p>

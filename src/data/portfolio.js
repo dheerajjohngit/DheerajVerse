@@ -12,11 +12,11 @@ export const portfolio = {
 
         subtitle: "Python Full Stack Developer | Data Science Enthusiast",
 
-        email: "yourmail@gmail.com",
+        email: "dheerajjohncr777@gmail.com",
 
-        phone: "+91 XXXXX XXXXX",
+        phone: "+91 7356119479",
 
-        location: "Kerala, India",
+        location: "Tamil Nadu, India",
 
         availability: "Open to Work"
 
