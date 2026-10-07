@@ -16,20 +16,17 @@
   min-height: 580px;
   padding: 40px 52px 30px;
   overflow: hidden;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background:
-    radial-gradient(ellipse at 64% 46%, rgba(14, 57, 125, 0.2), transparent 36%),
-    radial-gradient(ellipse at 5% 15%, rgba(11, 68, 102, 0.12), transparent 42%),
-    #030a11;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 .about-shell::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 67% 45%, rgba(30, 109, 255, 0.1), transparent 38%);
+  background: transparent;
   pointer-events: none;
 }
 
@@ -41,8 +38,8 @@
   right: 30%;
   bottom: -2px;
   height: 15%;
-  background: linear-gradient(105deg, transparent 12%, rgba(16, 47, 139, 0.46) 55%, rgba(75, 41, 202, 0.42));
-  clip-path: polygon(0 74%, 18% 68%, 34% 46%, 50% 21%, 64% 10%, 78% 28%, 91% 76%, 100% 100%, 0 100%);
+  background: transparent;
+  clip-path: none;
   pointer-events: none;
 }
 
@@ -62,7 +59,7 @@
   align-items: center;
   gap: 14px;
   margin-bottom: 22px;
-  color: #5dbbff;
+  color: var(--accent);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.88rem;
@@ -74,7 +71,7 @@
   width: 42px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #35baff, #268bff);
+  background: linear-gradient(90deg, var(--accent-light), var(--accent));
 }
 
 .about-copy h2 {
@@ -82,12 +79,12 @@
   font-size: 2.5rem;
   line-height: 1.05;
   letter-spacing: 0;
-  color: #f5f5f4;
+  color: var(--text-primary);
   font-weight: 900;
 }
 
 .about-copy h2 span {
-  background: linear-gradient(105deg, #35c8f3 0%, #2577ff 45%, #7629ef 100%);
+  background: linear-gradient(105deg, var(--accent-light) 0%, var(--accent) 45%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +99,7 @@
 .about-copy p {
   max-width: 560px;
   margin: 24px 0 30px;
-  color: #d0d6df;
+  color: var(--text-secondary);
   font-size: 1.12rem;
   line-height: 1.55;
 }
@@ -115,13 +112,13 @@
   padding: 17px 27px;
   border: none;
   border-radius: 999px;
-  background: #f5f5f5;
-  color: #050914;
+  background: var(--accent);
+  color: #09090B;
   font-size: 1.02rem;
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
-  box-shadow: 0 18px 40px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.2);
 }
 
 .journey-button:hover {
@@ -261,34 +258,34 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  color: #f5f5f4;
+  color: var(--text-primary);
   font-size: 1.12rem;
   font-weight: 700;
   text-align: left;
 }
 
 .feature-item:nth-child(1) .feature-icon {
-  background: rgba(90, 148, 255, 0.16);
-  border-color: rgba(90, 148, 255, 0.5);
-  color: #8dc9ff;
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.5);
+  color: #d4b8ff;
 }
 
 .feature-item:nth-child(2) .feature-icon {
-  background: rgba(183, 126, 255, 0.16);
-  border-color: rgba(183, 126, 255, 0.5);
-  color: #d5b1ff;
+  background: rgba(168, 85, 247, 0.14);
+  border-color: rgba(168, 85, 247, 0.5);
+  color: #e5d0ff;
 }
 
 .feature-item:nth-child(3) .feature-icon {
-  background: rgba(94, 202, 161, 0.16);
-  border-color: rgba(94, 202, 161, 0.5);
-  color: #9ef2cd;
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #c7b0ff;
 }
 
 .feature-item:nth-child(4) .feature-icon {
-  background: rgba(255, 202, 84, 0.14);
-  border-color: rgba(255, 202, 84, 0.4);
-  color: #ffd56d;
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #d9c7ff;
 }
 
 .feature-icon {
@@ -298,7 +295,7 @@
   display: grid;
   place-items: center;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
   font-size: 1.2rem;
 }
@@ -521,21 +518,19 @@
   height: min(720px, calc(100svh - 180px));
   min-height: 560px;
   padding: 34px 54px;
-  background:
-    radial-gradient(ellipse at 80% 52%, rgba(13, 40, 86, 0.24), transparent 45%),
-    #05080d;
+  background: transparent;
 }
 
 .about-shell--poster::before {
-  background: radial-gradient(ellipse at 78% 50%, rgba(17, 82, 186, 0.11), transparent 52%);
+  background: transparent;
 }
 
 .about-shell--poster::after {
   left: 48%;
   right: 0;
   height: 30%;
-  opacity: 0.42;
-  background: radial-gradient(ellipse at 45% 100%, rgba(14, 55, 133, 0.38), transparent 70%);
+  opacity: 0;
+  background: transparent;
   clip-path: none;
 }
 
@@ -551,7 +546,7 @@
   min-width: 0;
   height: auto;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 70px;
 }
 
 .about-poster-image {
@@ -561,6 +556,7 @@
   max-width: none;
   object-fit: cover;
   object-position: center 8%;
+  border-radius: 42px;
   filter: drop-shadow(0 24px 38px rgba(0, 0, 0, 0.4));
 }
 
@@ -580,7 +576,7 @@
 }
 
 .about-shell--poster .about-copy h2 span {
-  background: linear-gradient(105deg, #48baff, #397bff 58%, #8b62ff);
+  background: linear-gradient(105deg, var(--accent-light), var(--accent) 58%, #d8b4fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -589,7 +585,7 @@
 .about-shell--poster .about-copy p {
   max-width: 590px;
   margin: 22px 0 24px;
-  color: #bec8d7;
+  color: var(--text-secondary);
   font-size: 1.06rem;
   line-height: 1.7;
 }
@@ -620,29 +616,29 @@
   height: 34px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(107, 168, 255, 0.38);
+  border: 1px solid rgba(139, 92, 246, 0.38);
   border-radius: 10px;
-  background: rgba(56, 121, 227, 0.12);
-  color: #83c8ff;
+  background: rgba(139, 92, 246, 0.12);
+  color: #d4b8ff;
   font-size: 0.9rem;
 }
 
 .focus-item:nth-child(2) .focus-icon {
-  border-color: rgba(175, 119, 255, 0.38);
-  background: rgba(145, 93, 224, 0.12);
-  color: #c8a0ff;
+  border-color: rgba(168, 85, 247, 0.38);
+  background: rgba(168, 85, 247, 0.12);
+  color: #e7d4ff;
 }
 
 .focus-item:nth-child(3) .focus-icon {
-  border-color: rgba(78, 214, 165, 0.36);
-  background: rgba(58, 179, 132, 0.11);
-  color: #83e6c1;
+  border-color: rgba(184, 161, 255, 0.38);
+  background: rgba(184, 161, 255, 0.12);
+  color: #cdb6ff;
 }
 
 .focus-item:nth-child(4) .focus-icon {
-  border-color: rgba(248, 190, 76, 0.36);
-  background: rgba(211, 157, 52, 0.1);
-  color: #ffd273;
+  border-color: rgba(192, 132, 252, 0.38);
+  background: rgba(192, 132, 252, 0.1);
+  color: #e7d4ff;
 }
 
 .about-shell--poster .journey-button {
