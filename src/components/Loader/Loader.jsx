@@ -1,38 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Loader.css";
 import bootSequence from "../../utils/bootSequence";
 
 function Loader({ onFinish }) {
   const [messages, setMessages] = useState([]);
+  const terminalRef = useRef(null);
 
   useEffect(() => {
-  let index = 0;
-
-  const interval = setInterval(() => {
-
-    // Stop BEFORE accessing an invalid index
-    if (index >= bootSequence.length) {
-      clearInterval(interval);
-
-      setTimeout(() => {
-        onFinish();
-      }, 1200);
-
-      return;
+    const terminal = terminalRef.current;
+    if (terminal) {
+      terminal.scrollTop = terminal.scrollHeight;
     }
+  }, [messages]);
 
-    setMessages((prev) => [
-      ...prev,
-      bootSequence[index],
-    ]);
+  useEffect(() => {
+    let index = 0;
 
-    index++;
+    const interval = setInterval(() => {
+      if (index >= bootSequence.length) {
+        clearInterval(interval);
 
-  }, 800);
+        setTimeout(() => {
+          onFinish();
+        }, 1200);
 
-  return () => clearInterval(interval);
+        return;
+      }
 
-}, [onFinish]);
+      setMessages((prev) => [...prev, bootSequence[index]]);
+      index++;
+    }, 800);
+
+    return () => clearInterval(interval);
+  }, [onFinish]);
 
   return (
     <div className="loader">
@@ -43,7 +43,7 @@ function Loader({ onFinish }) {
           AI INITIALIZATION
         </p>
 
-        <div className="terminal">
+        <div className="terminal" ref={terminalRef}>
           {messages
   .filter(Boolean)
   .map((item, i) => (

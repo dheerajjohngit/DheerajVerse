@@ -9,6 +9,7 @@ import Skills from "./sections/Skills/Skills";
 import "./styles/app.css";
 import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Background from "./components/Background/Background";
 
@@ -33,6 +34,7 @@ function App() {
     <Projects />
     <Contact />
 </main>
+    <Footer />
   </>
 );
 }
