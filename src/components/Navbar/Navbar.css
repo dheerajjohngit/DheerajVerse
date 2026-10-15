@@ -502,7 +502,7 @@
     }
 
     .navbar {
-        position: sticky;
+        position: fixed;
         top: 0;
     }
 
@@ -833,7 +833,7 @@
     }
 
     .navbar {
-        position: sticky;
+        position: fixed;
         top: 0;
     }
 
@@ -947,7 +947,7 @@
 
 @media (max-width: 360px) {
     :root {
-        --mobile-navbar-height: 88px;
+        --mobile-navbar-height: 92px;
     }
 
     .navbar.scrolled {

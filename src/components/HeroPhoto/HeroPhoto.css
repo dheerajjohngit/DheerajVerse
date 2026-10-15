@@ -569,6 +569,48 @@ color:var(--text-secondary);
     }
 
 }
+
+@media (max-width: 720px) {
+    .hero-photo-card .scan-overlay {
+        background: rgba(8, 8, 12, 0.22);
+    }
+
+    .hero-photo-card .scan-line {
+        height: 2px;
+        box-shadow: 0 0 10px rgba(214, 204, 255, 0.8);
+    }
+
+    .hero-photo-card .scan-hud {
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        width: auto;
+        max-height: 48%;
+        overflow: hidden;
+        padding: 5px 6px;
+        border-radius: 8px;
+        backdrop-filter: blur(6px);
+    }
+
+    .hero-photo-card .scan-hud h4 {
+        margin-bottom: 3px;
+        font-size: 0.48rem;
+        letter-spacing: 0.04em;
+        line-height: 1.2;
+    }
+
+    .hero-photo-card .hud-row {
+        gap: 2px;
+        margin: 3px 0;
+        font-size: 0.46rem;
+        line-height: 1.2;
+    }
+
+    .hero-photo-card .hud-row:not(:last-child) {
+        display: none;
+    }
+}
+
 @keyframes hudRowIn{
 
     from{

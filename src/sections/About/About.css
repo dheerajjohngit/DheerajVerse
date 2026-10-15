@@ -745,10 +745,10 @@
   .about {
     width: calc(100% - 24px);
     min-height: calc(100svh - var(--mobile-navbar-height, 108px) - 5px);
-    scroll-margin-top: calc(var(--mobile-navbar-height, 108px) + 5px);
+    scroll-margin-top: var(--mobile-navbar-height, 108px);
     display: flex;
-    align-items: center;
-    padding: 8px 0 14px;
+    align-items: flex-start;
+    padding: 8px 0 6px;
   }
 
   .about-shell--poster {
@@ -802,12 +802,18 @@
 
   .about-poster {
     width: min(100%, 420px);
-    height: clamp(100px, 17svh, 140px);
+    height: clamp(120px, 19svh, 160px);
     aspect-ratio: auto;
     border-radius: 18px;
   }
 
   .about-poster-image {
     border-radius: 16px;
+  }
+}
+
+@media (max-width: 720px) and (min-height: 620px) {
+  .about-poster {
+    height: clamp(150px, calc(100svh - 460px), 390px);
   }
 }

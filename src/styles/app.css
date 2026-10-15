@@ -22,7 +22,7 @@ html{
 
 @media (max-width: 720px) {
     .app {
-        padding-top: 0;
+        padding-top: var(--mobile-navbar-height, 108px);
     }
 }
 
