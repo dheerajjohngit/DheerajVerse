@@ -184,6 +184,116 @@
 
 }
 
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 44px;
+        padding: 100px 0 44px;
+        min-height: auto;
+    }
+
+    .hero-left {
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 680px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .hero-photo-wrapper {
+        width: min(72vw, 440px);
+        height: min(72vw, 520px);
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        width: min(100%, 94%);
+        min-height: auto;
+        padding: 90px 0 60px;
+        gap: 32px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        padding: 9px 14px;
+        margin-bottom: 16px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 11vw, 3.6rem);
+        letter-spacing: -0.06em;
+    }
+
+    .hero-role {
+        font-size: 1.06rem;
+        margin-top: 16px;
+        min-height: 40px;
+    }
+
+    .hero-description {
+        margin-top: 18px;
+        font-size: .96rem;
+        line-height: 1.72;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        min-height: 48px;
+        padding: 15px 22px;
+    }
+
+    .hero-photo-wrapper {
+        width: min(92vw, 340px);
+        height: min(92vw, 400px);
+        padding-top: 10px;
+    }
+
+    .hero-circle {
+        width: min(78vw, 280px);
+        height: min(78vw, 280px);
+    }
+
+    .hero-glow {
+        width: min(68vw, 240px);
+        height: min(68vw, 240px);
+    }
+
+    .hero-link {
+        display: none;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        margin-top: 22px;
+    }
+}
+
 /* ---------------- RIGHT ---------------- */
 
 .hero-right{
@@ -658,5 +768,124 @@ display:none;
         flex-wrap: wrap;
         gap: 16px 24px;
         margin-top: 22px;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero {
+        min-height: calc(100svh - var(--mobile-navbar-height, 108px) - 5px);
+        scroll-margin-top: calc(var(--mobile-navbar-height, 108px) + 5px);
+        padding: 12px 0 18px;
+        gap: 8px;
+        align-content: center;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-tag {
+        margin-bottom: 10px;
+        padding: 7px 12px;
+        font-size: 0.62rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .hero-role {
+        min-height: 0;
+        margin-top: 7px;
+        font-size: 0.94rem;
+    }
+
+    .hero-description {
+        margin-top: 9px;
+        font-size: 0.82rem;
+        line-height: 1.42;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        min-height: 42px;
+        padding: 10px 16px;
+        font-size: 0.82rem;
+    }
+
+    .hero-photo-wrapper {
+        width: min(42vw, 170px);
+        height: min(46vw, 190px);
+        padding-top: 0;
+    }
+
+    .hero-photo-container,
+    .hero-photo-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-photo-card {
+        border-radius: 22px;
+    }
+
+    .hero-photo-container > .status-badge {
+        display: none;
+    }
+
+    .hero-photo-card .hero-info {
+        padding: 10px;
+    }
+
+    .hero-photo-card .hero-info h3 {
+        font-size: 1rem;
+    }
+
+    .hero-photo-card .hero-info p {
+        margin-top: 3px;
+        font-size: 0.78rem;
+    }
+
+    .hero-circle {
+        width: min(48vw, 190px);
+        height: min(48vw, 190px);
+    }
+
+    .hero-glow {
+        width: min(44vw, 170px);
+        height: min(44vw, 170px);
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 8px 18px;
+        margin-top: 10px;
+    }
+
+    .stat-item h2 {
+        font-size: 1.45rem;
+    }
+
+    .stat-item p {
+        margin-top: 2px;
+        font-size: 0.56rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 360px) and (max-height: 600px) {
+    .hero {
+        gap: 6px;
+        padding: 4px 0 6px;
+    }
+
+    .hero-photo-wrapper {
+        width: min(38vw, 122px);
+        height: min(40vw, 128px);
     }
 }

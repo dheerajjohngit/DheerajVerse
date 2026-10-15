@@ -686,6 +686,11 @@
         font-size: 0.73rem;
     }
 
+    .skill-node-name {
+        white-space: normal;
+        line-height: 1.2;
+    }
+
 }
 
 @media (min-width: 1181px) and (max-height: 850px) {

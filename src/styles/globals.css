@@ -11,7 +11,7 @@
 html{
 
     scroll-behavior:smooth;
-
+    overflow-x: hidden;
 }
 
 body{
@@ -23,9 +23,15 @@ body{
     font-family:'Inter',sans-serif;
 
     overflow-x:hidden;
+    max-width: 100vw;
 
     line-height:1.6;
 
+}
+
+#root {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{

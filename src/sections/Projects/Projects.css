@@ -318,7 +318,8 @@
   }
 
   .project-stage {
-    height: clamp(390px, 52vh, 470px);
+    height: clamp(400px, 52vh, 470px);
+    min-height: 400px;
   }
 
   .project-slide {
@@ -332,10 +333,12 @@
 
   .project-card-copy {
     height: calc(100% - 170px);
+    padding: 14px 14px 16px;
   }
 
   .project-summary {
     -webkit-line-clamp: 2;
+    font-size: 0.76rem;
   }
 
   .tech-badge {
@@ -344,6 +347,7 @@
 
   .project-actions a {
     flex: 1 1 0;
+    min-height: 40px;
   }
 
   .project-nav {
@@ -360,12 +364,22 @@
 }
 
 @media (max-width: 480px) {
+  .projects {
+    width: min(100%, 92%);
+    padding-top: 20px;
+  }
+
   .projects-header h2 {
-    font-size: clamp(2.2rem, 8vw, 3.3rem);
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  .project-stage {
+    height: 430px;
+    min-height: 430px;
   }
 
   .project-slide {
-    width: min(270px, 78vw);
+    width: min(280px, 82vw);
   }
 
   .project-card-copy {
@@ -374,6 +388,11 @@
 
   .project-actions {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-actions a {
+    width: 100%;
   }
 
   .progress-track {
@@ -1066,5 +1085,55 @@
 
   .projects-progress {
     margin-top: 17px;
+  }
+}
+
+@media (max-width: 720px) {
+  .projects {
+    min-height: calc(100svh - var(--mobile-navbar-height, 108px) - 5px);
+    scroll-margin-top: calc(var(--mobile-navbar-height, 108px) + 5px);
+    padding-top: 14px;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+
+  .projects-header {
+    margin-bottom: 6px;
+  }
+
+  .projects-header h2 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    line-height: 1;
+  }
+
+  .project-stage {
+    height: clamp(320px, 45svh, 380px);
+    min-height: 0;
+  }
+
+  .project-slide {
+    height: calc(100% - 14px);
+  }
+
+  .project-visual {
+    height: clamp(112px, 20svh, 145px);
+    flex-basis: clamp(112px, 20svh, 145px);
+  }
+
+  .project-card-copy {
+    padding: 9px 12px 11px;
+  }
+
+  .project-nav {
+    margin-top: 5px;
+  }
+
+  .project-nav-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .projects-progress {
+    margin-top: 12px;
   }
 }

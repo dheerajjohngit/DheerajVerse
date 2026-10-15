@@ -20,6 +20,12 @@ html{
     }
 }
 
+@media (max-width: 720px) {
+    .app {
+        padding-top: 0;
+    }
+}
+
 .app-content {
     text-align: center;
 }

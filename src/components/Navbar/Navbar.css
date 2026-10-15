@@ -501,6 +501,11 @@
         --mobile-navbar-height: 108px;
     }
 
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+
     .navbar.scrolled {
         --mobile-navbar-height: 100px;
     }
@@ -825,6 +830,11 @@
 @media (max-width: 520px) {
     :root {
         --mobile-navbar-height: 92px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
     }
 
     .navbar.scrolled {

@@ -130,8 +130,18 @@ function Navbar() {
             if (event.key === "Escape") setMenuOpen(false);
         };
 
+        const handleResize = () => {
+            if (window.innerWidth > 1100) {
+                setMenuOpen(false);
+            }
+        };
+
         window.addEventListener("keydown", closeOnEscape);
-        return () => window.removeEventListener("keydown", closeOnEscape);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("keydown", closeOnEscape);
+            window.removeEventListener("resize", handleResize);
+        };
     }, [menuOpen]);
 
     const handleLinkClick = () => setMenuOpen(false);

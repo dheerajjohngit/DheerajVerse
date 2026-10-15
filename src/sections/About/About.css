@@ -420,18 +420,27 @@
     border-radius: 22px;
   }
 
+  .about-kicker {
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+  }
+
   .about-copy h2 {
-    font-size: 2.55rem;
+    font-size: clamp(2.2rem, 9vw, 2.9rem);
   }
 
   .about-copy p {
     margin: 18px auto 22px;
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .journey-button {
     margin: 0 auto;
     padding: 15px 22px;
+    width: min(100%, 260px);
   }
 
   .code-block {
@@ -471,6 +480,7 @@
 
   .feature-item {
     font-size: 0.88rem;
+    line-height: 1.35;
   }
 
   .feature-icon {
@@ -728,5 +738,76 @@
     height: 30px;
     border-radius: 8px;
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    width: calc(100% - 24px);
+    min-height: calc(100svh - var(--mobile-navbar-height, 108px) - 5px);
+    scroll-margin-top: calc(var(--mobile-navbar-height, 108px) + 5px);
+    display: flex;
+    align-items: center;
+    padding: 8px 0 14px;
+  }
+
+  .about-shell--poster {
+    width: 100%;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+
+  .about-shell--poster .about-copy {
+    padding: 0;
+  }
+
+  .about-shell--poster .about-kicker {
+    margin-bottom: 8px;
+    font-size: 0.64rem;
+  }
+
+  .about-shell--poster .about-copy h2 {
+    font-size: clamp(1.75rem, 7vw, 2.2rem);
+    line-height: 1.02;
+  }
+
+  .about-shell--poster .about-copy p {
+    margin: 8px auto;
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+
+  .about-shell--poster .about-focus {
+    margin: 8px 0;
+  }
+
+  .focus-item {
+    min-height: 36px;
+    gap: 7px;
+    font-size: 0.72rem;
+  }
+
+  .focus-icon {
+    flex-basis: 26px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.7rem;
+  }
+
+  .about-shell--poster .journey-button {
+    min-height: 40px;
+    padding: 9px 16px;
+    font-size: 0.8rem;
+  }
+
+  .about-poster {
+    width: min(100%, 420px);
+    height: clamp(100px, 17svh, 140px);
+    aspect-ratio: auto;
+    border-radius: 18px;
+  }
+
+  .about-poster-image {
+    border-radius: 16px;
   }
 }
